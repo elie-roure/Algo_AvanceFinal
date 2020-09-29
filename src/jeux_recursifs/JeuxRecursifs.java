@@ -1,4 +1,7 @@
 package jeux_recursifs;
+
+
+
 public class JeuxRecursifs {
 
     public void resoudre(int n){
@@ -31,7 +34,29 @@ public class JeuxRecursifs {
             resoudreAux14(n-1,i,k);
             System.out.println(i+"->"+j);
             resoudreAux14(n-1,k,j);
+
         }
     }
+    public void remplir(int n){
 
+        //initialisaoitn
+        if(n==4){
+        }
+        else {
+                remplir(n - 1);
+                vider(n - 2);
+                System.out.println(n-1+" ");
+            }
+        remplir(n-2);
+        }
+    public void vider(int n){
+        //initialision
+
+    }
+
+
+    public static void main(String[] args) {
+
+
+    }
 }
