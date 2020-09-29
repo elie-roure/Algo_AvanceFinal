@@ -10,10 +10,27 @@ public class JeuxRecursifs {
         if (n==1){
             System.out.println(i+"->"+j);
         }else {
-            int k = 6-(i+j);
+            int k = 6-i-j;
             resoudreAux(n-1, i,k);
             System.out.println(i+"->"+j);
             resoudreAux(n-1,k,j);
+        }
+    }
+
+    public int nbCoups(int n){
+        if (n==1){
+            return 1;
+        }else {
+            return 2*nbCoups(n-1)+1;
+        }
+    }
+
+    public void resoudreAux14 (int n, int i, int j){
+        if (n>1){
+            int k= 6-i-j;
+            resoudreAux14(n-1,i,k);
+            System.out.println(i+"->"+j);
+            resoudreAux14(n-1,k,j);
         }
     }
 
