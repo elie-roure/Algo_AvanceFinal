@@ -37,25 +37,41 @@ public class JeuxRecursifs {
 
         }
     }
-    public void remplir(int n){
+    public static void remplir(int n){
 
         //initialisaoitn
-        if(n==4){
+        if(n==1){
+            System.out.println("0 ");
+        }else if (n==2){
+            System.out.println("0 1");
         }
         else {
                 remplir(n - 1);
                 vider(n - 2);
                 System.out.println(n-1+" ");
+                remplir(n-2);
             }
-        remplir(n-2);
         }
-    public void vider(int n){
+    public static void vider(int n){
         //initialision
+        if(n==1){
+            System.out.println("0 ");
+        }else if (n==2){
+            System.out.println("0 1");
+        }
+        else {
+            vider(n - 1);
+            remplir(n - 2);
+            System.out.println(n-1+" ");
+            vider(n-2);
+        }
 
     }
 
 
     public static void main(String[] args) {
+
+        remplir(3);
 
 
     }
