@@ -37,6 +37,8 @@ public class JeuxRecursifs {
 
         }
     }
+
+
     public static void remplir(int n){
 
         //initialisaoitn
@@ -52,6 +54,9 @@ public class JeuxRecursifs {
                 remplir(n-2);
             }
         }
+
+
+
     public static void vider(int n){
         //initialision
         if(n==1){
@@ -71,7 +76,15 @@ public class JeuxRecursifs {
 
     public static void main(String[] args) {
 
-        remplir(3);
+        Baguenaudier baguenaudier = new Baguenaudier(3);
+        char[] tab = new char[3];
+        tab[0] = '*';
+        tab[1] = '*';
+        tab[2] = '*';
+        //baguenaudier.setTab(tab);
+
+
+        baguenaudier.remplir();
 
 
     }
